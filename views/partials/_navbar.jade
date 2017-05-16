@@ -1,0 +1,16 @@
+div.hi
+  div.nav
+    div.navitems
+      
+      
+      if currentUser
+        a.quiz.navlinks(href="") Quiz
+        a.profile.navlinks(href="/profile") Profile
+        a.logout.navlinks(href="/logout") Logout
+      if !currentUser
+        a.register.navlinks(href="/register") Register
+        a.login.navlinks(href="/login") Log in
+      
+      
+      
+        

@@ -1,0 +1,11 @@
+doctype html
+html
+  head
+    title= title
+    link(href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+  body
+    include ./partials/title.jade
+    include ./partials/_navbar.jade
+    block content

@@ -1,0 +1,22 @@
+extends layout
+block content
+  div.form
+  form(method="POST", action="/login")
+      div.formblock
+        
+        div.form-group
+            h1.login-form-title PLEASE LOG IN
+            div.mail
+              label(for="email").email Email
+              br
+              input(type="email", name="email",id="email", placeholder="E-mail")
+            div.password
+              label(for="password").email Password
+              br
+              input(type="password", name="password",id="password", placeholder="Please write your password")
+              br
+              button.submit-button(type="submit") Log in
+              
+              
+            
+        
