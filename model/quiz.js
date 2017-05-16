@@ -1,9 +1,5 @@
 var mongoose= require("mongoose");
 
-var quiz1 = require("../mockfiles/quiz.js")
-
-
-
 var QuizSchema = new mongoose.Schema(
   {quizTitle:String,
     questions:
@@ -21,9 +17,17 @@ var QuizSchema = new mongoose.Schema(
   }
 );
 
+/* QuizSchema.statics.createQuestion = function(quiz, questionNumber){
+
+Quiz.findOne({_id:questionNumber}).
+
+
+}
+*/
+
 var Quiz = mongoose.model('Quiz', QuizSchema);
 
-var naziQuiz= new Quiz(quiz1);
 
 
-module.exports=naziQuiz;
+
+module.exports=Quiz;

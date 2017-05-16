@@ -144,3 +144,22 @@ button.submit-button{
   padding:5px;
   margin-top: 10px;
 }
+
+/***********************************************
+***************QUIZ****************************/
+
+div.quiz.alternatives{
+  display:inline-block;
+  height: 400px;
+  width:200px;
+}
+
+div.blockalt{
+  float: left;
+  width: 400px;
+}
+div.blockalt:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input label {display: inline-flex; }

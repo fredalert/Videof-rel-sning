@@ -15,6 +15,7 @@ router.post("/", function(req, res, next){
     User.authenticate(req.body.email, req.body.password, function(error, user){
       if(error || !user){
         var err = new Error("No user or error");
+        err.status=401;
         return next(err);
       }
       else{

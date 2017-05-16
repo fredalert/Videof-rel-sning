@@ -19,8 +19,6 @@ var UserSchema = new mongoose.Schema({
     }
 });
 
-var User = mongoose.model('User', UserSchema);
-
 
 UserSchema.statics.authenticate= function(email, password, callback){
   User.findOne({email:email})
@@ -45,7 +43,7 @@ UserSchema.statics.authenticate= function(email, password, callback){
   )
 };
 
-
+var User = mongoose.model('User', UserSchema);
 
 UserSchema.pre("save", function(next){
 var user=this;
@@ -60,8 +58,6 @@ next();
 }
 })
 });
-
-
 
 
 module.exports = User;

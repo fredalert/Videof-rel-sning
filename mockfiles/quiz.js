@@ -20,6 +20,23 @@ var quiz1 = {quizTitle: "The nazi quiz",
     ]}
   ],
 
+  {question:"When did hitller die?",
+    _id:2,
+    comment:"1945. He probably commited suicide",
+    correctAnswer:3,
+    alternatives:[{alternativeName:"1943",
+                  alternativeNumber:1},
+
+                  {alternativeName:"2002",
+                  alternativeNumber:2},
+
+                  {alternativeName:"1945",
+                  alternativeNumber:3},
+
+                  {alternativeName:"1910",
+                  alternativeNumber:4},
+  ]}
+
 
 };
 

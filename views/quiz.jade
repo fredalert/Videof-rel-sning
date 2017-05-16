@@ -1,22 +1,29 @@
 extends layout
 block content
   h1.quiz.title #{quizTitle}
+    
   
   div.quiz.form 
+    h2.quiz.question #{question}
     form.quiz.form(method="POST", action="/quiz")
       div.quiz.alternatives
-        
-          input.quiz(type="radio", name="alternative", value="alt1")
-          label(for="alt1") #{alt1} hej hallå
-        
-          input.quiz(type="radio", name="alternative", value="alt2") 
-          label(for="alt2") #{alt2} cool boy
-        
-          input.quiz(type="radio", name="alternative", value="alt3")
-          label(for="alt3") #{alt3} SSSS
-        
-          input.quiz(type="radio", name="alternative", value="alt4") 
-          label(for="alt4") #{alt4} MONET
+        div.alternative
+          div.blockalt
+            input.quiz(type="radio", name="alternative", value="1")
+            label(for="alt1") #{alt1} 
+        div.alternative
+          div.blockalt
+              input.quiz(type="radio", name="alternative", value="2") 
+              label(for="alt2") #{alt2} 
+        div.alternative
+          div.blockalt
+              input.quiz(type="radio", name="alternative", value="3")
+              label(for="alt3") #{alt3} 
+        div.alternative
+          div.blockalt
+              input.quiz(type="radio", name="alternative", value="4") 
+              label(for="alt4") #{alt4}
+        button.submit-button(type="submit") Answer
           
         
         
