@@ -4,9 +4,10 @@ div.hi
       
       
       if currentUser
-        a.quiz.navlinks(href="") Quiz
+        a.quiz.navlinks(href="/webutbildningar") Webutbildningar
         a.profile.navlinks(href="/profile") Profile
         a.logout.navlinks(href="/logout") Logout
+        a.profilename.navlinks(href="/profile") #{name}
       if !currentUser
         a.register.navlinks(href="/register") Register
         a.login.navlinks(href="/login") Log in

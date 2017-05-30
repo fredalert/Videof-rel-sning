@@ -1,7 +1,7 @@
 body {
-  padding: 20px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  margin:0 auto;
+
+  font-family: 'Noto Sans', sans-serif;
+  font:10px;
   color:black;
 }
 
@@ -15,36 +15,33 @@ color:grey;
 
 /**************************************
 *********************TITLE*************/
-div.title{
-  display:block;
-  text-align: left;
-  margin:5px 15px 0px 10px;
-  padding: 10px;
-}
 
-div.title-line{
-  display:inline-block;
-background-color: rgba(255,150,150, 0.5);
-width:320px;
-height: 20px;
-}
+
+
 
 h1.title{
   display:inline-block;
-  font-family: 'Righteous', cursive;
-  font-size: 400%;
+  font-size: 120%;
   background-color: rgba(255,255,255, 0.5);
-  margin:10px 15px 5px 10px;}
+  border: 1px black;
+  border-style: solid;
+  padding: 5px;
+  margin: 2px;
+
+ }
+
+
+
 
 /***********NAVBAR-STUFF**********************
 *********************************************/
 
 div.nav {
 
-font-size: 200%;
-background-color: rgba(120, 120, 255, 0.2);
-height:50px;
-width:80%;
+font-size: 100%;
+background-color: rgba(20, 20, 80, 0.9);
+height:40px;
+width:95%;
 }
 
 div.navitems{
@@ -52,23 +49,21 @@ padding-left: 20px;
 
 }
 .navlinks{
-color:grey;
-font-family: 'Righteous', cursive;
-margin:10px;
+color:white;
+margin:10px, auto;
+padding:8px;
+background-color: rgba(255,255,255, 0.1);
+float:left;
 
 }
 
-a.login{
-float:left;
-margin:10px;
-background-color: rgba(255,255,255, 0.5);}
-
-a.quiz{
-float:left;
-margin:10px;
-
-background-color: rgba(255,255,255, 0.5);
+a.profilename.navlinks{
+  float:right;
+  font-size: 50%;
 }
+
+
+
 
 /********************************'
 **********INDEX******************/
@@ -76,12 +71,10 @@ background-color: rgba(255,255,255, 0.5);
 div.index{
 width:90%;
 padding:2%;
-background-color: rgba(255, 240, 240, 1);
 margin:2% auto;
 }
 
 p{
-  font-family: 'Righteous', cursive;
   font-size: 130%;
   line-height: 200%;
   margin: 3% auto;
@@ -92,27 +85,30 @@ p{
 
 
   /*******************************************
-  ***************FORM**************************/
+  ***************Login form**************************/
+
+  h1.quiz.title{
+    border-style: none;
+    margin-bottom: 10px;
+}
 h1.login-form-title{
   font-size: 100%;
   padding-left:10px;
   background-color:rgba(230, 230, 255, 0.7);
 }
 div.form-group{
+
     padding:2%;
     margin: 2%;
     margin-top: 5%;
-  background-color:rgba(255, 230, 230, 1);
-    width:40%;
+    background-color:rgba(200, 200, 255, 1);
+    width:60%;
     opacity: 0.5;
     display: inline-block;
     position: absolute;
     left:5%;
-    border-radius: 5px;
-  font-family: 'Righteous', cursive;
     font-size: 200%;
-    box-shadow: 0px 0px 15px #888888;
-    border: 1px;
+    border-style: solid;
 }
 
   div.form-block{
@@ -147,19 +143,50 @@ button.submit-button{
 
 /***********************************************
 ***************QUIZ****************************/
+div.capturediv{
+  margin-top: 60px;
+  display:block;
+  position: relative;
+}
+h1.quiz.title{
+  font-size: 120%
+}
+
+form.quiz {
+  position: absolute;
+
+  background-color: rgba(200, 200, 255, 0.1);
+  padding: 10px;
+  box-shadow: 0px 0px 5px #888888;
+  border-radius: 1%;
+  left: 10%;
+  width:40%;
+}
 
 div.quiz.alternatives{
-  display:inline-block;
-  height: 400px;
-  width:200px;
+
+  height: auto;
+  margin-bottom: 12%;
+
+
 }
 
 div.blockalt{
-  float: left;
-  width: 400px;
+
+}
+
+input.quiz{
+  float: both;;
+}
+
+label{
+  float: both;
 }
 div.blockalt:hover{
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-input label {display: inline-flex; }
+button.submit-button{
+  padding:5% 10%;
+  margin:7px;
+}

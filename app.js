@@ -15,7 +15,8 @@ var login = require('./routes/login');
 var logout = require('./routes/logout');
 var register = require('./routes/register');
 var profile = require('./routes/profile');
-var quiz = require('./routes/quiz')
+var quiz = require('./routes/quiz');
+var webutbildningar = require('./routes/webutbildningar');
 
 var User = require('./model/user.js');
 
@@ -26,6 +27,8 @@ mongoose.connect("mongodb://localhost:27017/quiztest");
 var db= mongoose.connection;
 
 
+
+app.use('jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use(session({
   secret:"I love treehouse",
@@ -64,8 +67,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static("public"));
-
+app.use(express.static(__dirname + "/public"));
 
 
 app.use('/', index);
@@ -75,6 +77,7 @@ app.use('/logout', logout);
 app.use('/register', register);
 app.use('/profile', profile);
 app.use('/quiz', quiz);
+app.use('/webutbildningar', webutbildningar);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -2,10 +2,19 @@ doctype html
 html
   head
     title= title
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     link(href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto" rel="stylesheet")
+
     link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    
+    
     
   body
     include ./partials/title.jade
     include ./partials/_navbar.jade
+    
+    
     block content
+    script(src="/javascripts/javaScriptcode.js")

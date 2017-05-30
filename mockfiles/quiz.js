@@ -1,4 +1,4 @@
-var quiz1 = {quizTitle: "The nazi quiz",
+var quiz1 = {utbildningar:[{quizTitle: "The nazi quiz",
   questions:
      [
 
@@ -17,8 +17,8 @@ var quiz1 = {quizTitle: "The nazi quiz",
 
                     {alternativeName:"Hemmingway",
                     alternativeNumber:4},
-    ]}
-  ],
+    ]},
+
 
   {question:"When did hitller die?",
     _id:2,
@@ -35,10 +35,70 @@ var quiz1 = {quizTitle: "The nazi quiz",
 
                   {alternativeName:"1910",
                   alternativeNumber:4},
-  ]}
 
 
-};
+
+
+
+                ]
+    },
+    {isVideo:true
+    },
+]
+
+},
+
+{quizTitle: "The cool quiz",
+  questions:
+     [
+
+    {question:"Who is the coolest ball?",
+      _id:1,
+      comment:"Of course it is Fefe",
+      correctAnswer:1,
+      alternatives:[{alternativeName:"Fefe",
+                    alternativeNumber:1},
+
+                    {alternativeName:"Mimi",
+                    alternativeNumber:2},
+
+                    {alternativeName:"Smallball",
+                    alternativeNumber:3},
+
+                    {alternativeName:"Hemmingway",
+                    alternativeNumber:4},
+    ]},
+
+
+  {question:"Who is the singer in the strokes?",
+    _id:2,
+    comment:"Julian Casablancas",
+    correctAnswer:3,
+    alternatives:[{alternativeName:"Julian",
+                  alternativeNumber:1},
+
+                  {alternativeName:"Sebbe staxx",
+                  alternativeNumber:2},
+
+                  {alternativeName:"Daniel Cleasson",
+                  alternativeNumber:3},
+
+                  {alternativeName:"A cool dude",
+                  alternativeNumber:4},
+
+
+
+
+
+                ]
+    },
+    {isVideo:true
+    },
+]
+
+}
+
+]};
 
 
 module.exports= quiz1;

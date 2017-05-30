@@ -16,7 +16,15 @@ var UserSchema = new mongoose.Schema({
     password: {
       type: String,
       required: true
-    }
+    },
+    quizzes: [{
+      quiz: String,
+      incorrectQuestions:[Number],
+      correctQuestions:[],
+      completedQuiz:Boolean,
+
+    }],
+
 });
 
 
@@ -42,8 +50,24 @@ UserSchema.statics.authenticate= function(email, password, callback){
     }
   )
 };
+/*
+UserSchema.statics.userAddIncorrect= function(userId, questionNumber){
+console.log("Incorrect add to database function started")
+console.log(userId);
+console.log(this.name);
+  User.findByIdAndUpdate({
+ "_id" : userId,
+ "quizzes.quiz" : "naziQuiz"
+}).exec(function(error, user){
+  if(error){return console.log("something went wrong")}
+  else{
+ $push: {
+   "quizzes.$.incorrectQuestions":0
+ }}
+});}*/
 
-var User = mongoose.model('User', UserSchema);
+
+
 
 UserSchema.pre("save", function(next){
 var user=this;
@@ -58,6 +82,10 @@ next();
 }
 })
 });
+
+var User = mongoose.model('User', UserSchema);
+
+
 
 
 module.exports = User;

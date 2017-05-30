@@ -1,0 +1,8 @@
+extends layout
+block content
+  h1.movie.title MOOOVIIIEEE
+  video(width="320", height="240" controls)
+    source(src="videos/VID_20170521_003741.mp4", type="video/mp4" )
+  form.movie.form(method="POST", action="/quiz")
+    button.movie.next(type="submit", name="movieNext", value="movieNext") Next
+  

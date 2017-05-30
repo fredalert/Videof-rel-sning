@@ -1,29 +1,38 @@
 var mongoose= require("mongoose");
 
 var QuizSchema = new mongoose.Schema(
+  {utbildningar:[
   {quizTitle:String,
     questions:
        [
-      {question:String,
+      {isVideo:{
+        type:Boolean,
+        defualt:false,},
+        url:{type:String,
+        default:""},
+        question:{type:String,
+        default:""},
         _id:Number,
-        comment:String,
-        correctAnswer:Number,
-        alternatives:[{alternativeName:String,
-                      alternativeNumber:Number,
+
+
+        comment:{type:String,
+        default:""},
+        correctAnswer:{type:Number,
+          default:99},
+
+        alternatives:[{alternativeName:{type:String,
+        default:""},
+                      alternativeNumber:{type:Number, default:99},
 
         }],
       }
-    ]
-  }
-);
+    ]}
 
-/* QuizSchema.statics.createQuestion = function(quiz, questionNumber){
-
-Quiz.findOne({_id:questionNumber}).
+]});
 
 
-}
-*/
+
+
 
 var Quiz = mongoose.model('Quiz', QuizSchema);
 

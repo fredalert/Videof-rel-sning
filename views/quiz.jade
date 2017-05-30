@@ -1,30 +1,32 @@
 extends layout
 block content
-  h1.quiz.title #{quizTitle}
-    
-  
-  div.quiz.form 
-    h2.quiz.question #{question}
-    form.quiz.form(method="POST", action="/quiz")
-      div.quiz.alternatives
-        div.alternative
-          div.blockalt
-            input.quiz(type="radio", name="alternative", value="1")
-            label(for="alt1") #{alt1} 
-        div.alternative
-          div.blockalt
-              input.quiz(type="radio", name="alternative", value="2") 
-              label(for="alt2") #{alt2} 
-        div.alternative
-          div.blockalt
-              input.quiz(type="radio", name="alternative", value="3")
-              label(for="alt3") #{alt3} 
-        div.alternative
-          div.blockalt
-              input.quiz(type="radio", name="alternative", value="4") 
-              label(for="alt4") #{alt4}
-        button.submit-button(type="submit") Answer
-          
+  div.capturediv
+            
+            div.quiz.form 
+              h1.quiz.title #{quizTitle}
+              h2.quiz.question #{question}
+              form.quiz.form(method="POST", action="/quiz")
+                  div.quiz.alternatives
+                    div.alternative
+                      div.blockalt
+                        input.quiz(type="radio", id="alt1", name="alternative", value="1") 
+                        label.quiz(for="alt1") #{alt1}
+                    div.alternative
+                      div.blockalt
+                          input.quiz(type="radio",  name="alternative", value="2") 
+                          label.quiz(for="alt2") #{alt2}  
+                    div.alternative
+                      div.blockalt
+                          input.quiz(type="radio", name="alternative", value="3")  
+                          label.quiz(for="alt3") #{alt3}
+                    div.alternative
+                      div.blockalt
+                          input.quiz(type="radio", name="alternative", value="4") 
+                          label.quiz(for="alt4") #{alt4}
+                  button.submit-button(type="submit", name="answer" value="answer") Answer
+                  
+                  
+                
         
         
         

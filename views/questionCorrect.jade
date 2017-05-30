@@ -1,0 +1,9 @@
+extends layout
+block content
+  
+  h1.correct.question #{question}
+  h2.correct.isCorrect #{isCorrect}
+  h2.correct.comment #{comment}
+  form.correct.form(method="POST", action="/quiz")
+    button.correct.next-button(type="submit", name="next", value="next") Next
+  
